@@ -1,0 +1,23 @@
+string encode(string s)
+{     
+  string z ;
+  int cnt = 1 , i;
+  for( i = 0 ; i<s.size()-1 ; i++)
+  {
+      if(s[i]==s[i+1])
+      cnt++ ;
+      else
+      {
+        
+          z.push_back(s[i]);
+          string x = to_string(cnt);
+          z += x ;
+          cnt = 1 ;
+      }
+  }
+  z.push_back(s[i]);
+  string x = to_string(cnt);
+  z += x ;
+  return z ;
+}     
+ 
